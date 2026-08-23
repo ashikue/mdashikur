@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Train Ticket Booking</title>
+    <link rel="stylesheet" href="train.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚆 Online Train Ticket Booking</h1>
+        <p>Book your train ticket easily and quickly</p>
+    </header>
+
+    <main>
+        <section class="booking-box">
+            <h2>Search Train</h2>
+
+            <form id="trainForm">
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <select id="from" required>
+                        <option value="">Select Station</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Khulna">Khulna</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <select id="to" required>
+                        <option value="">Select Station</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Khulna">Khulna</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Journey Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="passengers">Passengers</label>
+                    <input type="number" id="passengers" min="1" max="10" value="1" required>
+                </div>
+
+                <button type="submit">Search Train</button>
+            </form>
+        </section>
+
+        <section id="results" class="results">
+            <h2>Available Trains</h2>
+            <div id="trainList"></div>
+        </section>
+
+        <section id="booking" class="booking-box hidden">
+            <h2>Passenger Information</h2>
+
+            <form id="passengerForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </section>
+
+        <div id="message"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 Online Train Ticket Booking | Student Project</p>
+    </footer>
+
+    <script src="train.js"></script>
+</body>
+</html>
